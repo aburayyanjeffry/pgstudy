@@ -36,7 +36,7 @@ Exit psql
 
 Download and unzip the dvdrental data
 ```
-curl -O https://www.postgresqltutorial.com/wp-content/uploads/2019/05/dvdrental.zip && unzip dvdrenta
+curl -O https://www.postgresqltutorial.com/wp-content/uploads/2019/05/dvdrental.zip && unzip dvdrental.zip
 ```
 
 Execute the following commmand to import the data
