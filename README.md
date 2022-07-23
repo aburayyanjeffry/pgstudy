@@ -28,8 +28,7 @@ psql postgres
 create database dvdrental
 ```
 
-6. Import dvdrental data to dvdrental database
-Exit psql 
+6. Exit psql 
 ```
 \q
 ```
@@ -104,5 +103,8 @@ dvdrental=# select * from actor limit 10;
 
 ```
 
-
+13. Stop PostgreSQL service
+```
+pg_ctl -D /opt/homebrew/var/postgres stop
+```
 
