@@ -34,6 +34,11 @@ Exit psql
 \q
 ```
 
+Download and unzip the dvdrental data
+```
+curl -O https://www.postgresqltutorial.com/wp-content/uploads/2019/05/dvdrental.zip && unzip dvdrenta
+```
+
 Execute the following commmand to import the data
 ```
 pg_restore -d dvdrental dvdrental.tar 
