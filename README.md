@@ -8,6 +8,11 @@ This is my notes for Postgres SQL Study
 brew install postgres
 ```
 
+2. Start the postgres service
+```
+pg_ctl -D /opt/homebrew/var/postgres start
+```
+
 2. Login to the default DB
 ```
 psql postgres
@@ -28,3 +33,15 @@ Exit psql and execute the following commmand
 ```
 pg_restore -d dvdrental dvdrental.tar 
 ```
+
+6. Login to dvdrental database to verify tables are inplace
+Login
+```
+psql -D dvdrental
+```
+
+Describe all tables
+```
+\dt
+```
+
