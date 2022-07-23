@@ -13,54 +13,54 @@ brew install postgres
 pg_ctl -D /opt/homebrew/var/postgres start
 ```
 
-2. Login to the default DB
+3. Login to the default DB
 ```
 psql postgres
 ```
 
-3. List all tables
+4. List all tables
 ```
 \l
 ```
 
-4. Create a dvdrental database
+5. Create a dvdrental database
 ```
 create database dvdrental
 ```
 
-5. Import dvdrental data to dvdrental database
+6. Import dvdrental data to dvdrental database
 Exit psql 
 ```
 \q
 ```
 
-Download and unzip the dvdrental data
+7. Download and unzip the dvdrental data
 ```
 curl -O https://www.postgresqltutorial.com/wp-content/uploads/2019/05/dvdrental.zip && unzip dvdrental.zip
 ```
 
-Execute the following commmand to import the data
+8. Execute the following commmand to import the data
 ```
 pg_restore -d dvdrental dvdrental.tar 
 ```
 
-6. Login to dvdrental database to verify tables are inplace
+9. Login to dvdrental database to verify tables are inplace
 Login
 ```
 psql -d dvdrental
 ```
 
-Describe all tables
+10. Describe all tables
 ```
 \dt
 ```
 
-List the first 10 actor from the actor table
+11. List the first 10 actor from the actor table
 ```
 select * from actor limit 10;
 ```
 
-sample output
+12. sample output
 ```
 ❯ psql -d dvdrental
 psql (14.4)
