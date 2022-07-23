@@ -3,7 +3,7 @@ This is my notes for Postgres SQL Study
 
 ## MacOS Installation
 
-1. Install by Brew
+### 1. Install by Brew
 ```
 brew install postgres
 ```
