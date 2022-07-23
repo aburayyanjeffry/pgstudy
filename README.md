@@ -18,3 +18,13 @@ psql postgres
 \l
 ```
 
+4. Create a dvdrental database
+```
+create database dvdrental
+```
+
+5. Import dvdrental data to dvdrental database
+Exit psql and execute the following commmand
+```
+pg_restore -d dvdrental dvdrental.tar 
+```
