@@ -132,3 +132,24 @@ Stop the container
 ```
 docker stop some-postgres
 ```
+
+## Docker with persistance storage
+
+### 1. Create volume
+```
+docker volume create pg-data
+```
+
+### 2. Inspect volumes 
+```
+docker volume ls
+```
+
+### 3. Run the Container with the create volume
+```
+docker run -d \                                                                                                                                           
+        --name pg-with-vol \
+        -e POSTGRES_PASSWORD=mysecretpassword \
+        -v pg-data:/var/lib/postgresql/data \
+        postgre
+```
