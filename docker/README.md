@@ -11,10 +11,13 @@ This is my notes for Postgres SQL Study for Docker
 or click the following link to go directly to this page
 https://hub.docker.com/_/postgres
 
-### 3. Login to the default DB
+### 3. Start the Postgres Container
 ```
-psql postgres
+docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres
 ```
+- ```--name some-postgres``` set the container name
+- ```-e POSTGRES_PASSWORD=mysecretpassword``` set the password of the default user ```postgres```
+- ```-d postgres``` create a initial DB named ```postgres```
 
 ### 4. List all tables
 ```
