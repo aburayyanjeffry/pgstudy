@@ -19,7 +19,25 @@ docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgre
 - ```-e POSTGRES_PASSWORD=mysecretpassword``` set the password of the default user ```postgres```
 - ```-d postgres``` create a initial DB named ```postgres```
 
-### 4. List all tables
+### 4. List all running container to ensure the postgres is running
+```
+docker ps
+```
+
+Sample output:
+```
+❯ docker ps
+CONTAINER ID   IMAGE      COMMAND                  CREATED          STATUS          PORTS      NAMES
+a3b14a12580a   postgres   "docker-entrypoint.s…"   33 minutes ago   Up 33 minutes   5432/tcp   some-postgres
+```
+
+
+### 5. Execute the internal ***psql*** client to the container
+```
+docker exec -it some-postgres psql -U postgres
+```
+
+### 6. List all tables
 ```
 \l
 ```
