@@ -8,9 +8,8 @@ This is my notes for Postgres SQL Study for Docker
 
 ### 2. Select the official image. This is the image mantained by the Docker PostgresSQL Community
 ![docker hub2](/img/docker02.png)
-```
-pg_ctl -D /opt/homebrew/var/postgres start
-```
+or click the following link to go directly to this page
+https://hub.docker.com/_/postgres
 
 ### 3. Login to the default DB
 ```
