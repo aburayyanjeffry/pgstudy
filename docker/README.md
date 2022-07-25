@@ -42,7 +42,7 @@ docker exec -it some-postgres psql -U postgres
 \l
 ```
 
-### 5. Create a dvdrental database
+### 7. Create a dvdrental database
 ```
 create database dvdrental
 ```
@@ -59,13 +59,13 @@ curl -O https://www.postgresqltutorial.com/wp-content/uploads/2019/05/dvdrental.
 
 ### 8. Execute the following commmand to import the data
 ```
-pg_restore -d dvdrental dvdrental.tar 
+docker exec -i some-postgres pg_restore -U postgres -v -d dvdrental < dvdrental.tar
 ```
 
 ### 9. Login to dvdrental database to verify tables are inplace
 Login
 ```
-psql -d dvdrental
+docker exec -it some-postgres psql -U postgres -d dvdrental
 ```
 
 ### 10. Describe all tables
@@ -123,6 +123,12 @@ dvdrental=# select * from actor limit 10;
 ```
 
 ### 13. Stop PostgreSQL service
+Exit from the psql
 ```
-pg_ctl -D /opt/homebrew/var/postgres stop
+\q
+```
+
+Stop the container
+```
+docker stop some-postgres
 ```
