@@ -151,5 +151,5 @@ docker run -d \
         --name pg-with-vol \
         -e POSTGRES_PASSWORD=mysecretpassword \
         -v pg-data:/var/lib/postgresql/data \
-        postgre
+        postgres
 ```
