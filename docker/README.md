@@ -3,7 +3,7 @@ This is my notes for Postgres SQL Study for Docker
 
 ## Docker walkthrough
 
-### 1. Install by Brew
+### 1. Go to https://hub.docker.com and search for ***postgres***
 ```
 brew install postgres
 ```
