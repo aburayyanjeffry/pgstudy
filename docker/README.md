@@ -153,3 +153,25 @@ docker run -d \
         -v pg-data:/var/lib/postgresql/data \
         postgres
 ```
+
+## Docker Compose 
+Instead of the CLI way, we could put the application configuration in a yaml file know as Docker Compose. It's a yaml config file that is understand by docker to start and stop of a Docker container
+
+Create the following docker-compose.yaml file
+```
+version: '3.1'
+
+services:
+
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: mysecretpassword
+
+```
+
+### 2. To start Postgres just run the following command in the same location of the yaml file
+```
+docker-compose up
+```
