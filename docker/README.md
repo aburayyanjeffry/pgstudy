@@ -6,7 +6,8 @@ This is my notes for Postgres SQL Study for Docker
 ### 1. Go to https://hub.docker.com and search for ***postgres***
 ![docker hub](/img/docker01.png)
 
-### 2. Start the postgres service
+### 2. Select the official image. This is the image mantained by the Docker PostgresSQL Community
+![docker hub2](/img/docker02.png)
 ```
 pg_ctl -D /opt/homebrew/var/postgres start
 ```
