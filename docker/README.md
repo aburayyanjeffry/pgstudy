@@ -4,7 +4,7 @@ This is my notes for Postgres SQL Study for Docker
 ## Docker walkthrough
 
 ### 1. Go to https://hub.docker.com and search for ***postgres***
-[docker hub](!/img/docker01.png)
+![docker hub](/img/docker01.png)
 
 ### 2. Start the postgres service
 ```
