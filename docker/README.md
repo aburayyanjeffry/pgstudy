@@ -160,15 +160,18 @@ Instead of the CLI way, we could put the application configuration in a yaml fil
 Create the following docker-compose.yaml file
 ```
 version: '3.1'
-
 services:
-
   db:
+    container_name: pg-from-dc
     image: postgres
     restart: always
     environment:
       POSTGRES_PASSWORD: mysecretpassword
-
+    volumes:
+      - pg-data-2:/var/lib/postgresql/data
+volumes:
+  pg-data-2:
+    external: false
 ```
 
 ### 2. To start Postgres just run the following command in the same location of the yaml file
